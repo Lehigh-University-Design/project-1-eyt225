@@ -1,0 +1,25 @@
+const mediaList = [
+    "videos/videoplayback.mp4",
+    // Add more media URLs
+];
+
+function getRandomMedia() {
+    return mediaList[Math.floor(Math.random() * mediaList.length)];
+}
+var mediaContainer = document.getElementById('videos');
+
+function displayRandomMedia() {
+    const randomMedia = getRandomMedia();
+
+    if (randomMedia.endsWith('.mp4')) {
+        mediaContainer.innerHTML = `<video autoplay loop muted src="${randomMedia}"></video>`;
+    } else {
+        mediaContainer.innerHTML = `<img src="${randomMedia}" alt="Random Image">`;
+    }
+}
+
+// Display random media on page load
+displayRandomMedia();
+
+// Optionally, you can set a timer to change media periodically
+setInterval(displayRandomMedia, 10000);  // Change every 10 seconds
