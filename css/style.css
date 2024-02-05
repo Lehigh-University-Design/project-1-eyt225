@@ -6,6 +6,12 @@ body{
     font-style: normal; */
     background-color: rgb(1, 122, 138);
    Margin: 20px
+
+   body{ h1{ font-family: "Protest Riot", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;}
+        }
 }
 
 .post {
